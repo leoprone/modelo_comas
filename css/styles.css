@@ -1,0 +1,278 @@
+l
+html {
+    box-sizing: border-box;
+  font-size: 16px;
+ 
+     }
+*,*::after, *::before {
+         box-sizing: inherit;
+}
+
+
+h1{
+    
+    margin: 0;
+    text-align: center;
+}
+body{
+    margin: 0;
+     padding: 0;  
+     background-color: rgb(46, 40, 70);
+     
+      }
+
+
+
+.tapa-hambre{
+    width: 42%;
+    height: 42%;
+    position: relative;
+    top: 45.7%;
+    left: 5%;
+    z-index: 7;
+}
+.tapa-hambre img{
+    max-width: 100%;
+    height: auto;
+}
+
+/*TOCADISCOS-DISCO TODO CON CSS*/
+
+.disc-container-total{
+    width: 96.5vw;
+    height: 96.5vw;
+    
+    position: relative;
+}
+
+/*DISC*/
+
+.container-circle{
+    
+    width: 42%;
+    height: 42%;
+    position: relative;
+    left: 5%;
+    z-index: 4;
+    
+  }
+
+  @keyframes Disc-Animation{
+      0%{
+        transform: translateX(0);
+      }
+      25%{
+          transform: perspective(300px) translateX(110%) translateY(0) rotateX(0deg);
+      }
+      40%{
+          transform: perspective(300px) translateX(110%) translateY(60%) rotateX(0deg);
+      }
+      70%{
+          transform: perspective(1000px) translateX(80%) translateY(90%) rotateX(60deg);
+      }
+      95%{
+          transform: perspective(1000px) translateX(50%) translateY(110%) rotateX(70deg) rotateY(0deg);
+      }
+      100%{
+        transform: perspective(1000px) translateX(35%) translateY(130%) rotateX(70deg) rotateY(-2deg);
+    }
+  }
+  @keyframes Disc-Rotation{
+    0%{
+     transform: perspective(300px) rotateZ(0deg); 
+    }
+    100%{
+      transform: perspective(300px) rotateZ(360deg);
+    }
+  }
+
+
+  
+
+
+
+  .disc-translate{
+    color: rgb(167, 176, 187);
+   width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+   height: 100%;
+    border-radius: 50%;
+  
+    background-image: repeating-radial-gradient(rgb(12, 11, 11) 0% 1%, black 2% 7%); 
+  
+     animation: Disc-Animation 10s linear both;
+   
+  }
+
+  .disco-inclinado{
+      width: 100%;
+      height: 100%;
+         
+  }
+
+.disco-inclinado-final{
+    transform: perspective(1000px) translateX(50%) translateY(110%) rotateX(70deg) rotateY(-2deg);
+}
+
+  .disc-rotation{
+    color: rgb(167, 176, 187);
+    width: 100%;
+      
+    height: 100%;
+     border-radius: 50%;
+   position: relative;
+     background-image: repeating-radial-gradient(rgb(12, 11, 11) 0% 1%, black 2% 7%); 
+    top: 40%;
+    left: -20%;
+   
+    animation: Disc-Rotation 3.8s linear infinite both;
+}
+
+.audio{
+  position: relative;
+  top: 20%;
+}
+
+.boton-paused{
+    opacity: 0.3;
+    position: relative;
+    top: 10%;
+}
+
+.opacity-1{
+    position: relative;
+    top: 10%;
+    opacity: 1;
+
+}
+
+.no-visible{
+    opacity: 0;
+}
+
+.paused{
+    animation-play-state: paused;
+}
+
+  .hambre-tapa{
+   top: 35%;
+    text-align: center;
+    width: 100%;
+    
+    position: absolute;
+  }
+  .hambre-tapa img{
+    border-radius: 50%;
+    width: 30%;
+    height: 30%;
+      }
+  
+
+      /*TOCADISCOS*/
+  
+  .color-fondo-tocadiscos{
+      width: 100%;
+      height: 60%;
+      
+  }
+  .prueba-paint-container-total{
+    width: 100%;
+    height: 170%;
+    top: 30%;
+    
+    background-size: 100%;
+    background-repeat: no-repeat;
+   
+      position: relative;
+     
+      z-index: 0;
+     
+      
+    }
+
+    /*PUA*/
+
+    @keyframes pua-translate{
+      0%{
+        transform: translateX(0);
+      }
+      70%{
+        transform: translateX(-65%);
+      }
+      100%{
+        transform: translateX(-90%);
+      }
+    }
+/*
+    .pua-dibujo{
+        
+        width: 30%;
+        position: absolute;
+        top: 105%;
+        left: 50%;
+        z-index: 54;
+        
+        animation: pua-translate 5s ease-in both paused;
+    }*/
+    
+    
+.eje{
+  width: 2vw;
+  height: 3vw;
+  background-color: rgb(8, 7, 7);
+position: relative;
+  top: -62.5%;
+  left: 46%;
+  border-bottom: rgb(1, 1, 1) thick solid;
+  border-radius: 40% 40% 27% 27%;
+}
+
+
+
+.pua-dibujo {
+  position: absolute;
+  z-index: 1;
+  width: 16.5vw;
+  height: auto;
+  top: 113%;
+  left: 70%;
+ 
+  z-index: 20;
+  animation: pua-translate 5s linear both paused;
+}
+
+
+
+@keyframes Pua-animada{
+   0%{
+     transform: translateY(0%);
+     
+   }
+   25%{
+    transform: translateY(1%) rotateZ(-0.1deg);
+  }
+  50%{
+    transform: translateY(2%) rotateZ(-0.5deg);
+  }
+  75%{
+    transform: translateY(3%) rotateZ(-0.4deg);
+  }
+   100%{
+     transform: translateY(4%) rotateZ(-0.3);
+   }
+
+}
+
+   .boton-visible{
+     z-index: 30;
+     position: absolute;
+   }
+
+   .audio{
+     display: none;
+   }
+
+.running{
+    animation-play-state: running;
+}
